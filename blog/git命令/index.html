@@ -1,0 +1,1334 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "\/blog\/"
+        },
+        "articleSection" : "blog",
+        "name" : "git命令大全",
+        "headline" : "git命令大全",
+        "description" : "mff的个人博客",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2020",
+        "datePublished": "2020-04-28 00:00:00 \x2b0000 UTC",
+        "dateModified" : "2020-04-28 00:00:00 \x2b0000 UTC",
+        "url" : "\/blog\/blog\/git%E5%91%BD%E4%BB%A4\/",
+        "wordCount" : "785",
+        "keywords" : [ "tutorial","Blog" ]
+    }
+    </script>
+        
+            
+                <title>git命令大全</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.69.0" />
+        
+
+
+        
+            <meta name="author" content="mff">
+        
+        
+            <meta name="description" content="mff的个人博客">
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="git命令大全"/>
+<meta name="twitter:description" content="mff的个人博客"/>
+
+        <meta property="og:title" content="git命令大全" />
+<meta property="og:description" content="mff的个人博客" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/blog/git%E5%91%BD%E4%BB%A4/" />
+<meta property="article:published_time" content="2020-04-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-28T00:00:00+00:00" />
+
+        <meta property="og:image" content="/blog//images/logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        <meta itemprop="name" content="git命令大全">
+<meta itemprop="description" content="mff的个人博客">
+<meta itemprop="datePublished" content="2020-04-28T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-04-28T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="785">
+
+
+
+<meta itemprop="keywords" content="tutorial," />
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="/blog/css/main.css">
+            <link rel="stylesheet" href="/blog/css/add-on.css">
+            <link rel="stylesheet" href="/blog/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="/blog/">blog</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/blog/">
+                            <i class="fa fa-home">&nbsp;</i>主页
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog笔记
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://mff-project.gitee.io/hugoblog/posts/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>个人简历
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/itemized/">
+                            <i class="fa fa-list">&nbsp;</i>最近项目
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>联系我
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="/blog/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="/blog/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/blog/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>主页
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog笔记
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://mff-project.gitee.io/hugoblog/posts/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>个人简历
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/itemized/">
+                            <h3>
+                                <i class="fa fa-list">&nbsp;</i>最近项目
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>联系我
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/docker%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%89%E8%A3%85/">doker安装及介绍</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-22'>
+                                    May 22, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/%E4%B8%83%E7%89%9B%E4%BA%91%E8%BF%9B%E5%BA%A6%E6%9D%A1%E6%98%BE%E7%A4%BA%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/">七牛云进度条显示上传文件</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-21'>
+                                    May 21, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/%E5%88%86%E9%A1%B5%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/">分页器的使用</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-21'>
+                                    May 21, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/%E5%8E%9F%E7%94%9Fsql%E5%AE%9E%E7%8E%B0%E5%A4%9A%E9%87%8D%E6%9F%A5%E8%AF%A2/">原生sql底层实现多重查询</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-20'>
+                                    May 20, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E5%92%8C%E5%85%B3%E9%94%AE%E8%AF%8D%E4%BA%AE%E9%AB%98/">模糊搜索及关键词亮高</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-20'>
+                                    May 20, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2fblog%2fblog%2fgit%25E5%2591%25BD%25E4%25BB%25A4%2f&amp;text=git%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8&amp;via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2fblog%2fblog%2fgit%25E5%2591%25BD%25E4%25BB%25A4%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fblog%2fgit%25E5%2591%25BD%25E4%25BB%25A4%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2fblog%2fblog%2fgit%25E5%2591%25BD%25E4%25BB%25A4%2f&amp;title=git%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fblog%2fgit%25E5%2591%25BD%25E4%25BB%25A4%2f&amp;title=git%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fblog%2fgit%25E5%2591%25BD%25E4%25BB%25A4%2f&amp;title=git%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fblog%2fgit%25E5%2591%25BD%25E4%25BB%25A4%2f&amp;description=git%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by mff&amp;body=%2fblog%2fblog%2fgit%25E5%2591%25BD%25E4%25BB%25A4%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="/blog/blog/git%E5%91%BD%E4%BB%A4/">git命令大全</a></h1>
+            
+        
+        
+            <p>mff的个人博客</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2020-04-28'>
+            April 28, 2020</time>
+        <span class="author">mff</span>
+        
+            <p>4 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2fblog%2fblog%2fgit%25E5%2591%25BD%25E4%25BB%25A4%2f&amp;text=git%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8&amp;via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2fblog%2fblog%2fgit%25E5%2591%25BD%25E4%25BB%25A4%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fblog%2fgit%25E5%2591%25BD%25E4%25BB%25A4%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2fblog%2fblog%2fgit%25E5%2591%25BD%25E4%25BB%25A4%2f&amp;title=git%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fblog%2fgit%25E5%2591%25BD%25E4%25BB%25A4%2f&amp;title=git%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fblog%2fgit%25E5%2591%25BD%25E4%25BB%25A4%2f&amp;title=git%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fblog%2fgit%25E5%2591%25BD%25E4%25BB%25A4%2f&amp;description=git%e5%91%bd%e4%bb%a4%e5%a4%a7%e5%85%a8" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by mff&amp;body=%2fblog%2fblog%2fgit%25E5%2591%25BD%25E4%25BB%25A4%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+
+  <div id="content">
+    <p>配置 Git 的相关参数。</p>
+<p>Git 一共有3个配置文件：</p>
+<ol>
+<li>仓库级的配置文件：在仓库的 .git/.gitconfig，该配置文件只对所在的仓库有效。</li>
+<li>全局配置文件：Mac 系统在 ~/.gitconfig，Windows 系统在 C:\Users&lt;用户名&gt;.gitconfig。</li>
+<li>系统级的配置文件：在 Git 的安装目录下（Mac 系统下安装目录在 /usr/local/git）的 etc 文件夹中的 gitconfig。</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 查看配置信息</span>
+<span style="color:#75715e"># --local：仓库级，--global：全局级，--system：系统级</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git config <span style="color:#f92672">&lt;--</span>local <span style="color:#f92672">|</span> <span style="color:#f92672">--</span><span style="color:#66d9ef">global</span> <span style="color:#f92672">|</span> <span style="color:#f92672">--</span>system<span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span>l
+
+<span style="color:#75715e"># 查看当前生效的配置信息</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git config <span style="color:#f92672">-</span>l
+
+<span style="color:#75715e"># 编辑配置文件</span>
+<span style="color:#75715e"># --local：仓库级，--global：全局级，--system：系统级</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git config <span style="color:#f92672">&lt;--</span>local <span style="color:#f92672">|</span> <span style="color:#f92672">--</span><span style="color:#66d9ef">global</span> <span style="color:#f92672">|</span> <span style="color:#f92672">--</span>system<span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span>e
+
+<span style="color:#75715e"># 添加配置项</span>
+<span style="color:#75715e"># --local：仓库级，--global：全局级，--system：系统级</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git config <span style="color:#f92672">&lt;--</span>local <span style="color:#f92672">|</span> <span style="color:#f92672">--</span><span style="color:#66d9ef">global</span> <span style="color:#f92672">|</span> <span style="color:#f92672">--</span>system<span style="color:#f92672">&gt;</span> <span style="color:#f92672">--</span>add <span style="color:#f92672">&lt;</span>name<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>value<span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 获取配置项</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git config <span style="color:#f92672">&lt;--</span>local <span style="color:#f92672">|</span> <span style="color:#f92672">--</span><span style="color:#66d9ef">global</span> <span style="color:#f92672">|</span> <span style="color:#f92672">--</span>system<span style="color:#f92672">&gt;</span> <span style="color:#f92672">--</span>get <span style="color:#f92672">&lt;</span>name<span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 删除配置项</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git config <span style="color:#f92672">&lt;--</span>local <span style="color:#f92672">|</span> <span style="color:#f92672">--</span><span style="color:#66d9ef">global</span> <span style="color:#f92672">|</span> <span style="color:#f92672">--</span>system<span style="color:#f92672">&gt;</span> <span style="color:#f92672">--</span>unset <span style="color:#f92672">&lt;</span>name<span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 配置提交记录中的用户信息</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git config <span style="color:#f92672">--</span><span style="color:#66d9ef">global</span> user<span style="color:#f92672">.</span>name <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户名</span><span style="color:#f92672">&gt;</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git config <span style="color:#f92672">--</span><span style="color:#66d9ef">global</span> user<span style="color:#f92672">.</span>email <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">邮箱地址</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 更改Git缓存区的大小</span>
+<span style="color:#75715e"># 如果提交的内容较大，默认缓存较小，提交会失败</span>
+<span style="color:#75715e"># 缓存大小单位：B，例如：524288000（500MB）</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git config <span style="color:#f92672">--</span><span style="color:#66d9ef">global</span> http<span style="color:#f92672">.</span>postBuffer <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">缓存大小</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 调用 git status/git diff 命令时以高亮或彩色方式显示改动状态</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git config <span style="color:#f92672">--</span><span style="color:#66d9ef">global</span> color<span style="color:#f92672">.</span>ui true
+
+<span style="color:#75715e"># 配置可以缓存密码，默认缓存时间15分钟</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git config <span style="color:#f92672">--</span><span style="color:#66d9ef">global</span> credential<span style="color:#f92672">.</span>helper cache
+
+<span style="color:#75715e"># 配置密码的缓存时间</span>
+<span style="color:#75715e"># 缓存时间单位：秒</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git config <span style="color:#f92672">--</span><span style="color:#66d9ef">global</span> credential<span style="color:#f92672">.</span>helper <span style="color:#e6db74">&#39;cache --timeout=&lt;缓存时间&gt;&#39;</span>
+
+<span style="color:#75715e"># 配置长期存储密码</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git config <span style="color:#f92672">--</span><span style="color:#66d9ef">global</span> credential<span style="color:#f92672">.</span>helper store
+</code></pre></div><h2 id="git-clone">git clone</h2>
+<p>从远程仓库克隆一个版本库到本地。</p>
+<hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 默认在当前目录下创建和版本库名相同的文件夹并下载版本到该文件夹下</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git clone <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">远程仓库的网址</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 指定本地仓库的目录</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git clone <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">远程仓库的网址</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">本地目录</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># -b 指定要克隆的分支，默认是master分支</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git clone <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">远程仓库的网址</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span>b <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">分支名称</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">本地目录</span><span style="color:#f92672">&gt;</span>
+</code></pre></div><h2 id="git-init">git init</h2>
+<p>初始化项目所在目录，初始化后会在当前目录下出现一个名为 .git 的目录。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 初始化本地仓库，在当前目录下生成 .git 文件夹</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git init
+</code></pre></div><hr>
+<h2 id="git-status">git status</h2>
+<p>查看本地仓库的状态。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 查看本地仓库的状态</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git status
+
+<span style="color:#75715e"># 以简短模式查看本地仓库的状态</span>
+<span style="color:#75715e"># 会显示两列，第一列是文件的状态，第二列是对应的文件</span>
+<span style="color:#75715e"># 文件状态：A 新增，M 修改，D 删除，?? 未添加到Git中</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git status <span style="color:#f92672">-</span>s
+</code></pre></div><hr>
+<h2 id="git-remote">git remote</h2>
+<p>操作远程库。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 列出已经存在的远程仓库</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git remote
+
+<span style="color:#75715e"># 列出远程仓库的详细信息，在别名后面列出URL地址</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git remote <span style="color:#f92672">-</span>v
+<span style="color:#960050;background-color:#1e0010">$</span> git remote <span style="color:#f92672">--</span>verbose
+
+<span style="color:#75715e"># 添加远程仓库</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git remote add <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">远程仓库的别名</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">远程仓库的</span>URL地址<span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 修改远程仓库的别名</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git remote rename <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">原远程仓库的别名</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">新的别名</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 删除指定名称的远程仓库</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git remote remove <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">远程仓库的别名</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 修改远程仓库的 URL 地址</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git remote set<span style="color:#f92672">-</span>url <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">远程仓库的别名</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">新的远程仓库</span>URL地址<span style="color:#f92672">&gt;</span>
+</code></pre></div><hr>
+<h2 id="git-branch">git branch</h2>
+<p>操作 Git 的分支命令。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 列出本地的所有分支，当前所在分支以 &#34;*&#34; 标出</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git branch
+
+<span style="color:#75715e"># 列出本地的所有分支并显示最后一次提交，当前所在分支以 &#34;*&#34; 标出</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git branch <span style="color:#f92672">-</span>v
+
+<span style="color:#75715e"># 创建新分支，新的分支基于上一次提交建立</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git branch <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">分支名</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 修改分支名称</span>
+<span style="color:#75715e"># 如果不指定原分支名称则为当前所在分支</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git branch <span style="color:#f92672">-</span>m [<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">原分支名称</span><span style="color:#f92672">&gt;</span>] <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">新的分支名称</span><span style="color:#f92672">&gt;</span>
+<span style="color:#75715e"># 强制修改分支名称</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git branch <span style="color:#f92672">-</span>M [<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">原分支名称</span><span style="color:#f92672">&gt;</span>] <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">新的分支名称</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 删除指定的本地分支</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git branch <span style="color:#f92672">-</span>d <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">分支名称</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 强制删除指定的本地分支</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git branch <span style="color:#f92672">-</span>D <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">分支名称</span><span style="color:#f92672">&gt;</span>
+</code></pre></div><hr>
+<h2 id="git-checkout">git checkout</h2>
+<p>检出命令，用于创建、切换分支等。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 切换到已存在的指定分支</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git checkout <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">分支名称</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 创建并切换到指定的分支，保留所有的提交记录</span>
+<span style="color:#75715e"># 等同于 &#34;git branch&#34; 和 &#34;git checkout&#34; 两个命令合并</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git checkout <span style="color:#f92672">-</span>b <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">分支名称</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 创建并切换到指定的分支，删除所有的提交记录</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git checkout <span style="color:#f92672">--</span>orphan <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">分支名称</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 替换掉本地的改动，新增的文件和已经添加到暂存区的内容不受影响</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git checkout <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">文件路径</span><span style="color:#f92672">&gt;</span>
+</code></pre></div><hr>
+<h2 id="git-cherry-pick">git cherry-pick</h2>
+<p>把已经提交的记录合并到当前分支。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 把已经提交的记录合并到当前分支</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git cherry<span style="color:#f92672">-</span>pick <span style="color:#f92672">&lt;</span>commit ID<span style="color:#f92672">&gt;</span>
+</code></pre></div><hr>
+<h2 id="git-add">git add</h2>
+<p>把要提交的文件的信息添加到暂存区中。当使用 git commit 时，将依据暂存区中的内容来进行文件的提交。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 把指定的文件添加到暂存区中</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git add <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">文件路径</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 添加所有修改、已删除的文件到暂存区中</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git add <span style="color:#f92672">-</span>u [<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">文件路径</span><span style="color:#f92672">&gt;</span>]
+<span style="color:#960050;background-color:#1e0010">$</span> git add <span style="color:#f92672">--</span>update [<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">文件路径</span><span style="color:#f92672">&gt;</span>]
+
+<span style="color:#75715e"># 添加所有修改、已删除、新增的文件到暂存区中，省略 &lt;文件路径&gt; 即为当前目录</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git add <span style="color:#f92672">-</span>A [<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">文件路径</span><span style="color:#f92672">&gt;</span>]
+<span style="color:#960050;background-color:#1e0010">$</span> git add <span style="color:#f92672">--</span>all [<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">文件路径</span><span style="color:#f92672">&gt;</span>]
+
+<span style="color:#75715e"># 查看所有修改、已删除但没有提交的文件，进入一个子命令系统</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git add <span style="color:#f92672">-</span>i [<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">文件路径</span><span style="color:#f92672">&gt;</span>]
+<span style="color:#960050;background-color:#1e0010">$</span> git add <span style="color:#f92672">--</span>interactive [<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">文件路径</span><span style="color:#f92672">&gt;</span>]
+</code></pre></div><h2 id="git-commit">git commit</h2>
+<p>将暂存区中的文件提交到本地仓库中。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 把暂存区中的文件提交到本地仓库，调用文本编辑器输入该次提交的描述信息</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git commit
+
+<span style="color:#75715e"># 把暂存区中的文件提交到本地仓库中并添加描述信息</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git commit <span style="color:#f92672">-</span>m <span style="color:#e6db74">&#34;&lt;提交的描述信息&gt;&#34;</span>
+
+<span style="color:#75715e"># 把所有修改、已删除的文件提交到本地仓库中</span>
+<span style="color:#75715e"># 不包括未被版本库跟踪的文件，等同于先调用了 &#34;git add -u&#34;</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git commit <span style="color:#f92672">-</span>a <span style="color:#f92672">-</span>m <span style="color:#e6db74">&#34;&lt;提交的描述信息&gt;&#34;</span>
+
+<span style="color:#75715e"># 修改上次提交的描述信息</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git commit <span style="color:#f92672">--</span>amend
+</code></pre></div><hr>
+<h2 id="git-fetch">git fetch</h2>
+<p>从远程仓库获取最新的版本到本地的 tmp 分支上。</p>
+<pre><code class="language-pyt" data-lang="pyt"># 将远程仓库所有分支的最新版本全部取回到本地
+$ git fetch &lt;远程仓库的别名&gt;
+
+# 将远程仓库指定分支的最新版本取回到本地
+$ git fetch &lt;远程主机名&gt; &lt;分支名&gt;
+</code></pre><hr>
+<h2 id="git-merge">git merge</h2>
+<p>合并分支。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 把指定的分支合并到当前所在的分支下</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git merge <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">分支名称</span><span style="color:#f92672">&gt;</span>
+</code></pre></div><h2 id="git-diff">git diff</h2>
+<p>比较版本之间的差异。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 比较当前文件和暂存区中文件的差异，显示没有暂存起来的更改</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git diff
+
+<span style="color:#75715e"># 比较暂存区中的文件和上次提交时的差异</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git diff <span style="color:#f92672">--</span>cached
+<span style="color:#960050;background-color:#1e0010">$</span> git diff <span style="color:#f92672">--</span>staged
+
+<span style="color:#75715e"># 比较当前文件和上次提交时的差异</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git diff HEAD
+
+<span style="color:#75715e"># 查看从指定的版本之后改动的内容</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git diff <span style="color:#f92672">&lt;</span>commit ID<span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 比较两个分支之间的差异</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git diff <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">分支名称</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">分支名称</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 查看两个分支分开后各自的改动内容</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git diff <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">分支名称</span><span style="color:#f92672">&gt;...&lt;</span><span style="color:#960050;background-color:#1e0010">分支名称</span><span style="color:#f92672">&gt;</span>
+</code></pre></div><hr>
+<h2 id="git-pull">git pull</h2>
+<p>从远程仓库获取最新版本并合并到本地。
+首先会执行 <code>git fetch</code>，然后执行 <code>git merge</code>，把获取的分支的 HEAD 合并到当前分支。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 从远程仓库获取最新版本。</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git pull
+</code></pre></div><hr>
+<h2 id="git-push">git push</h2>
+<p>把本地仓库的提交推送到远程仓库。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 把本地仓库的分支推送到远程仓库的指定分支</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git push <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">远程仓库的别名</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">本地分支名</span><span style="color:#f92672">&gt;</span>:<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">远程分支名</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 删除指定的远程仓库的分支</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git push <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">远程仓库的别名</span><span style="color:#f92672">&gt;</span> :<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">远程分支名</span><span style="color:#f92672">&gt;</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git push <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">远程仓库的别名</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">--</span>delete <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">远程分支名</span><span style="color:#f92672">&gt;</span>
+</code></pre></div><hr>
+<h2 id="git-log">git log</h2>
+<p>显示提交的记录。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 打印所有的提交记录</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git log
+
+<span style="color:#75715e"># 打印从第一次提交到指定的提交的记录</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git log <span style="color:#f92672">&lt;</span>commit ID<span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 打印指定数量的最新提交的记录</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git log <span style="color:#f92672">-&lt;</span><span style="color:#960050;background-color:#1e0010">指定的数量</span><span style="color:#f92672">&gt;</span>
+</code></pre></div><hr>
+<h2 id="git-reset">git reset</h2>
+<p>还原提交记录。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 重置暂存区，但文件不受影响</span>
+<span style="color:#75715e"># 相当于将用 &#34;git add&#34; 命令更新到暂存区的内容撤出暂存区，可以指定文件</span>
+<span style="color:#75715e"># 没有指定 commit ID 则默认为当前 HEAD</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git reset [<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">文件路径</span><span style="color:#f92672">&gt;</span>]
+<span style="color:#960050;background-color:#1e0010">$</span> git reset <span style="color:#f92672">--</span>mixed [<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">文件路径</span><span style="color:#f92672">&gt;</span>]
+
+<span style="color:#75715e"># 将 HEAD 的指向改变，撤销到指定的提交记录，文件未修改</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git reset <span style="color:#f92672">&lt;</span>commit ID<span style="color:#f92672">&gt;</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git reset <span style="color:#f92672">--</span>mixed <span style="color:#f92672">&lt;</span>commit ID<span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 将 HEAD 的指向改变，撤销到指定的提交记录，文件未修改</span>
+<span style="color:#75715e"># 相当于调用 &#34;git reset --mixed&#34; 命令后又做了一次 &#34;git add&#34;</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git reset <span style="color:#f92672">--</span>soft <span style="color:#f92672">&lt;</span>commit ID<span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 将 HEAD 的指向改变，撤销到指定的提交记录，文件也修改了</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git reset <span style="color:#f92672">--</span>hard <span style="color:#f92672">&lt;</span>commit ID<span style="color:#f92672">&gt;</span>
+</code></pre></div><hr>
+<h2 id="git-revert">git revert</h2>
+<p>生成一个新的提交来撤销某次提交，此次提交之前的所有提交都会被保留。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 生成一个新的提交来撤销某次提交</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git revert <span style="color:#f92672">&lt;</span>commit ID<span style="color:#f92672">&gt;</span>
+</code></pre></div><hr>
+<h2 id="git-tag">git tag</h2>
+<p>操作标签的命令。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 打印所有的标签</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git tag
+
+<span style="color:#75715e"># 添加轻量标签，指向提交对象的引用，可以指定之前的提交记录</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git tag <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">标签名称</span><span style="color:#f92672">&gt;</span> [<span style="color:#f92672">&lt;</span>commit ID<span style="color:#f92672">&gt;</span>]
+
+<span style="color:#75715e"># 添加带有描述信息的附注标签，可以指定之前的提交记录</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git tag <span style="color:#f92672">-</span>a <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">标签名称</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span>m <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">标签描述信息</span><span style="color:#f92672">&gt;</span> [<span style="color:#f92672">&lt;</span>commit ID<span style="color:#f92672">&gt;</span>]
+
+<span style="color:#75715e"># 切换到指定的标签</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git checkout <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">标签名称</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 查看标签的信息</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git show <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">标签名称</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 删除指定的标签</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git tag <span style="color:#f92672">-</span>d <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">标签名称</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 将指定的标签提交到远程仓库</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git push <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">远程仓库的别名</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">标签名称</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 将本地所有的标签全部提交到远程仓库</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git push <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">远程仓库的别名</span><span style="color:#f92672">&gt;</span> <span style="color:#960050;background-color:#1e0010">–</span>tags
+</code></pre></div><hr>
+<h2 id="git-mv">git mv</h2>
+<p>重命名文件或者文件夹。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 重命名指定的文件或者文件夹</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git mv <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">源文件</span><span style="color:#f92672">/</span><span style="color:#960050;background-color:#1e0010">文件夹</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">目标文件</span><span style="color:#f92672">/</span><span style="color:#960050;background-color:#1e0010">文件夹</span><span style="color:#f92672">&gt;</span>
+</code></pre></div><hr>
+<h2 id="git-rm">git rm</h2>
+<p>删除文件或者文件夹。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 移除跟踪指定的文件，并从本地仓库的文件夹中删除</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git rm <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">文件路径</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 移除跟踪指定的文件夹，并从本地仓库的文件夹中删除</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git rm <span style="color:#f92672">-</span>r <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">文件夹路径</span><span style="color:#f92672">&gt;</span>
+
+<span style="color:#75715e"># 移除跟踪指定的文件，在本地仓库的文件夹中保留该文件</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git rm <span style="color:#f92672">--</span>cached
+</code></pre></div><hr>
+<h2 id="git操作场景示例">Git操作场景示例</h2>
+<h3 id="1-删除掉本地不存在的远程分支">1. 删除掉本地不存在的远程分支</h3>
+<p>多人合作开发时，如果远程的分支被其他开发删除掉，在本地执行 <code>git branch --all</code> 依然会显示该远程分支，可使用下列的命令进行删除：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 使用 pull 命令，添加 -p 参数</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git pull <span style="color:#f92672">-</span>p
+
+<span style="color:#75715e"># 等同于下面的命令</span>
+<span style="color:#960050;background-color:#1e0010">$</span> git fetch <span style="color:#f92672">-</span>p
+<span style="color:#960050;background-color:#1e0010">$</span> git fetch <span style="color:#f92672">--</span>prune origin
+</code></pre></div>
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="/blog/blog/categories/hugo">Hugo</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="/blog/blog/tags/tutorial">tutorial</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="/blog/blog/git%E5%91%BD%E4%BB%A4%E8%87%AA%E6%80%BB%E7%BB%93/"
+                class="button big previous">git命令自总结</a></li>
+    
+
+    
+        <li><a href="/blog/blog/djangomodels%E6%A8%A1%E5%9E%8B%E5%8F%8A%E8%BF%81%E7%A7%BB/"
+                class="button big next">Django模型及迁移文件</a></li>
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='/blog/'><img src="/blog/img/main/touxiang3.jpg" class="intro-circle" width="150px" alt="Hugo Future Imperfect" /></a>
+      
+    
+    
+      <header>
+        <h2>mff</h2>
+        <p>Effort is for money, and money is life!</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+          
+    <li><a href="/blog/blog/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/https://mff-project.gitee.io/hugoblog/" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+  <li><a href="//gitlab.com/https://gitee.com/mff-project" target="_blank" title="GitLab" class="fa fa-gitlab"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/https://weibo.com/" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="weixin://contacts/profile/mpamhd1314" target="_blank" title="WeChat" class="fa fa-weixin"></a></li>
+
+
+
+  <li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=2980738482&amp;site=qq&amp;menu=yes" target="_blank" title="QQ" class="fa fa-qq"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:2980738482@qq.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Posts</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/docker%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%89%E8%A3%85/">doker安装及介绍</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-22'>
+                May 22, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/%E4%B8%83%E7%89%9B%E4%BA%91%E8%BF%9B%E5%BA%A6%E6%9D%A1%E6%98%BE%E7%A4%BA%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/">七牛云进度条显示上传文件</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-21'>
+                May 21, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/%E5%88%86%E9%A1%B5%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/">分页器的使用</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-21'>
+                May 21, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/%E5%8E%9F%E7%94%9Fsql%E5%AE%9E%E7%8E%B0%E5%A4%9A%E9%87%8D%E6%9F%A5%E8%AF%A2/">原生sql底层实现多重查询</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-20'>
+                May 20, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E5%92%8C%E5%85%B3%E9%94%AE%E8%AF%8D%E4%BA%AE%E9%AB%98/">模糊搜索及关键词亮高</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-20'>
+                May 20, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="/blog/categories/">Categories</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/blog/categories/hugo/">hugo</a>
+                <span style="float:right;">31</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>About</h3>
+      <p>blog于2020年5月10日创建(It was created on May 10, 2020),文章主要介绍了python的一些常用框架和库及它们的一些用法</p>
+      <a href="/blog/about/" class="button">Learn More</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+          
+    <li><a href="/blog/blog/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/https://mff-project.gitee.io/hugoblog/" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+  <li><a href="//gitlab.com/https://gitee.com/mff-project" target="_blank" title="GitLab" class="fa fa-gitlab"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/https://weibo.com/" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="weixin://contacts/profile/mpamhd1314" target="_blank" title="WeChat" class="fa fa-weixin"></a></li>
+
+
+
+  <li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=2980738482&amp;site=qq&amp;menu=yes" target="_blank" title="QQ" class="fa fa-qq"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:2980738482@qq.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2020
+        
+          mff blog
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="/blog/js/util.js"></script>
+      <script src="/blog/js/main.js"></script>
+      <script src="/blog/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

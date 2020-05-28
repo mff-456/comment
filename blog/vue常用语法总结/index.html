@@ -1,0 +1,1129 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "\/blog\/"
+        },
+        "articleSection" : "blog",
+        "name" : "vue常用语法总结",
+        "headline" : "vue常用语法总结",
+        "description" : "mff的个人博客",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2020",
+        "datePublished": "2020-04-28 00:00:00 \x2b0000 UTC",
+        "dateModified" : "2020-04-28 00:00:00 \x2b0000 UTC",
+        "url" : "\/blog\/blog\/vue%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93\/",
+        "wordCount" : "160",
+        "keywords" : [ "tutorial","Blog" ]
+    }
+    </script>
+        
+            
+                <title>vue常用语法总结</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.69.0" />
+        
+
+
+        
+            <meta name="author" content="mff">
+        
+        
+            <meta name="description" content="mff的个人博客">
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="vue常用语法总结"/>
+<meta name="twitter:description" content="mff的个人博客"/>
+
+        <meta property="og:title" content="vue常用语法总结" />
+<meta property="og:description" content="mff的个人博客" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/blog/vue%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/" />
+<meta property="article:published_time" content="2020-04-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-28T00:00:00+00:00" />
+
+        <meta property="og:image" content="/blog//images/logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        <meta itemprop="name" content="vue常用语法总结">
+<meta itemprop="description" content="mff的个人博客">
+<meta itemprop="datePublished" content="2020-04-28T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-04-28T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="160">
+
+
+
+<meta itemprop="keywords" content="tutorial," />
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="/blog/css/main.css">
+            <link rel="stylesheet" href="/blog/css/add-on.css">
+            <link rel="stylesheet" href="/blog/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="/blog/">blog</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/blog/">
+                            <i class="fa fa-home">&nbsp;</i>主页
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog笔记
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://mff-project.gitee.io/hugoblog/posts/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>个人简历
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/itemized/">
+                            <i class="fa fa-list">&nbsp;</i>最近项目
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>联系我
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="/blog/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="/blog/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/blog/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>主页
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog笔记
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://mff-project.gitee.io/hugoblog/posts/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>个人简历
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/itemized/">
+                            <h3>
+                                <i class="fa fa-list">&nbsp;</i>最近项目
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>联系我
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/docker%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%89%E8%A3%85/">doker安装及介绍</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-22'>
+                                    May 22, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/%E4%B8%83%E7%89%9B%E4%BA%91%E8%BF%9B%E5%BA%A6%E6%9D%A1%E6%98%BE%E7%A4%BA%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/">七牛云进度条显示上传文件</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-21'>
+                                    May 21, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/%E5%88%86%E9%A1%B5%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/">分页器的使用</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-21'>
+                                    May 21, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/%E5%8E%9F%E7%94%9Fsql%E5%AE%9E%E7%8E%B0%E5%A4%9A%E9%87%8D%E6%9F%A5%E8%AF%A2/">原生sql底层实现多重查询</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-20'>
+                                    May 20, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E5%92%8C%E5%85%B3%E9%94%AE%E8%AF%8D%E4%BA%AE%E9%AB%98/">模糊搜索及关键词亮高</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-20'>
+                                    May 20, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2fblog%2fblog%2fvue%25E5%25B8%25B8%25E7%2594%25A8%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f&amp;text=vue%e5%b8%b8%e7%94%a8%e8%af%ad%e6%b3%95%e6%80%bb%e7%bb%93&amp;via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2fblog%2fblog%2fvue%25E5%25B8%25B8%25E7%2594%25A8%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fblog%2fvue%25E5%25B8%25B8%25E7%2594%25A8%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2fblog%2fblog%2fvue%25E5%25B8%25B8%25E7%2594%25A8%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f&amp;title=vue%e5%b8%b8%e7%94%a8%e8%af%ad%e6%b3%95%e6%80%bb%e7%bb%93" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fblog%2fvue%25E5%25B8%25B8%25E7%2594%25A8%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f&amp;title=vue%e5%b8%b8%e7%94%a8%e8%af%ad%e6%b3%95%e6%80%bb%e7%bb%93" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fblog%2fvue%25E5%25B8%25B8%25E7%2594%25A8%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f&amp;title=vue%e5%b8%b8%e7%94%a8%e8%af%ad%e6%b3%95%e6%80%bb%e7%bb%93" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fblog%2fvue%25E5%25B8%25B8%25E7%2594%25A8%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f&amp;description=vue%e5%b8%b8%e7%94%a8%e8%af%ad%e6%b3%95%e6%80%bb%e7%bb%93" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by mff&amp;body=%2fblog%2fblog%2fvue%25E5%25B8%25B8%25E7%2594%25A8%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="/blog/blog/vue%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/">vue常用语法总结</a></h1>
+            
+        
+        
+            <p>mff的个人博客</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2020-04-28'>
+            April 28, 2020</time>
+        <span class="author">mff</span>
+        
+            <p>1 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2fblog%2fblog%2fvue%25E5%25B8%25B8%25E7%2594%25A8%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f&amp;text=vue%e5%b8%b8%e7%94%a8%e8%af%ad%e6%b3%95%e6%80%bb%e7%bb%93&amp;via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2fblog%2fblog%2fvue%25E5%25B8%25B8%25E7%2594%25A8%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fblog%2fvue%25E5%25B8%25B8%25E7%2594%25A8%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2fblog%2fblog%2fvue%25E5%25B8%25B8%25E7%2594%25A8%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f&amp;title=vue%e5%b8%b8%e7%94%a8%e8%af%ad%e6%b3%95%e6%80%bb%e7%bb%93" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fblog%2fvue%25E5%25B8%25B8%25E7%2594%25A8%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f&amp;title=vue%e5%b8%b8%e7%94%a8%e8%af%ad%e6%b3%95%e6%80%bb%e7%bb%93" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fblog%2fvue%25E5%25B8%25B8%25E7%2594%25A8%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f&amp;title=vue%e5%b8%b8%e7%94%a8%e8%af%ad%e6%b3%95%e6%80%bb%e7%bb%93" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fblog%2fvue%25E5%25B8%25B8%25E7%2594%25A8%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f&amp;description=vue%e5%b8%b8%e7%94%a8%e8%af%ad%e6%b3%95%e6%80%bb%e7%bb%93" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by mff&amp;body=%2fblog%2fblog%2fvue%25E5%25B8%25B8%25E7%2594%25A8%25E8%25AF%25AD%25E6%25B3%2595%25E6%2580%25BB%25E7%25BB%2593%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+
+  <div id="content">
+    <h3 id="什么是vue">什么是Vue？</h3>
+<p>Vue.js（读音 /vjuː/, 类似于 view）是一个构建数据驱动的 web 界面的渐进式框架。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。</p>
+<hr>
+<h3 id="v-if--指令后面赋予-可以转化为布尔类型的表达式可以有v-show的作用以外可以实现较多的功能">v-if  指令(后面赋予 可以转化为布尔类型的表达式，可以有v-show的作用以外可以实现较多的功能)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue">  <span style="color:#75715e">&lt;!--</span> <span style="color:#a6e22e">这是在template里使用的注释</span> <span style="color:#f92672">--&gt;</span>
+&lt;<span style="color:#f92672">template</span>&gt;
+	&lt;<span style="color:#f92672">div</span>&gt;
+          &lt;<span style="color:#f92672">div</span> <span style="color:#f92672">v-if</span><span style="color:#e6db74">=&#34;type === &#39;A&#39;&#34;&gt;A&lt;/div&gt;
+</span><span style="color:#e6db74">          &lt;div v-else-if=&#34;type === &#39;B&#39;&#34;</span>&gt;<span style="color:#a6e22e">B</span>&lt;/<span style="color:#f92672">div</span>&gt;
+          &lt;<span style="color:#f92672">div</span> <span style="color:#f92672">v-else</span>&gt;<span style="color:#a6e22e">not</span><span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">A</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#a6e22e">or</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">B</span><span style="color:#960050;background-color:#1e0010">&#34;</span>&lt;/<span style="color:#f92672">div</span>&gt;
+     &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#75715e">// 这是script里的注释
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+        <span style="color:#75715e">//  存储数据
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">data</span>(){
+        <span style="color:#66d9ef">return</span>{
+            <span style="color:#75715e">// 定义了v-if里判断条件的值
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;C&#39;</span>,
+        }
+    },
+ }
+&lt;/<span style="color:#f92672">script</span>&gt;
+
+</code></pre></div><hr>
+<h3 id="v-show--指令判断前端是否显示的作用">v-show  指令(判断前端是否显示的作用)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">template</span>&gt;
+	&lt;<span style="color:#f92672">div</span>&gt;
+          &lt;<span style="color:#f92672">div</span> <span style="color:#f92672">v-show</span><span style="color:#e6db74">=&#34;type&#34;</span>&gt;<span style="color:#a6e22e">我是否可以显示</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">type为0则我不能显示</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">type为1则可以显示</span>&lt;/<span style="color:#f92672">div</span>&gt;
+     &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#75715e">// 这是script里的注释
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+        <span style="color:#75715e">//  存储数据
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">data</span>(){
+        <span style="color:#66d9ef">return</span>{
+            <span style="color:#75715e">// 定义了v-if里判断条件的值
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span>,
+        }
+    },
+ }
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="v-for--指令进行循环遍历数据">v-for  指令(进行循环遍历数据)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">template</span>&gt;
+	&lt;<span style="color:#f92672">div</span>&gt;
+         &lt;<span style="color:#f92672">table</span>&gt;
+		   &lt;<span style="color:#f92672">tr</span> <span style="color:#f92672">v-for</span><span style="color:#e6db74">=&#34;(item,index) in tlist&#34; </span><span style="color:#f92672">:key</span><span style="color:#e6db74">=&#34;index&#34;</span>&gt;
+              	&lt;<span style="color:#f92672">td</span>&gt;
+                  {{ <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">text</span> }}
+              	&lt;/<span style="color:#f92672">td</span>&gt;
+                &lt;<span style="color:#f92672">td</span>&gt;
+                  {{ <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">num</span> }}
+              	&lt;/<span style="color:#f92672">td</span>&gt;
+                &lt;<span style="color:#f92672">td</span>&gt;
+                  {{ <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">price</span> }}
+              	&lt;/<span style="color:#f92672">td</span>&gt;
+    		&lt;/<span style="color:#f92672">tr</span>&gt;
+         &lt;/<span style="color:#f92672">table</span>&gt;
+     &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#75715e">// 这是script里的注释
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+        <span style="color:#75715e">//  存储数据
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">data</span>(){
+        <span style="color:#66d9ef">return</span>{
+            <span style="color:#75715e">// 定义了v-if里判断条件的值
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">tlist</span><span style="color:#f92672">:</span>[{<span style="color:#a6e22e">text</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;汽车&#39;</span>,<span style="color:#a6e22e">num</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span>,<span style="color:#a6e22e">price</span><span style="color:#f92672">:</span><span style="color:#ae81ff">10</span>},{<span style="color:#a6e22e">text</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;化妆品&#39;</span>,<span style="color:#a6e22e">num</span><span style="color:#f92672">:</span><span style="color:#ae81ff">2</span>,<span style="color:#a6e22e">price</span><span style="color:#f92672">:</span><span style="color:#ae81ff">6</span>},{<span style="color:#a6e22e">text</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;牛奶&#39;</span>,<span style="color:#a6e22e">num</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>,<span style="color:#a6e22e">price</span><span style="color:#f92672">:</span><span style="color:#ae81ff">7</span>}]
+        }
+    },
+ }
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="v-bind--指令v-bind指令可以在其名称后面带一个参数中间放一个冒号隔开这个参数通常是html元素的特性-attribute-">v-bind  指令(v-bind指令可以在其名称后面带一个参数，中间放一个冒号隔开，这个参数通常是HTML元素的特性 attribute )</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">template</span>&gt;
+	&lt;<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">v</span><span style="color:#f92672">-bind:src</span><span style="color:#e6db74">=&#34;../../xxx.jpg&#34;</span>&gt;<span style="color:#a6e22e">这里的v</span><span style="color:#f92672">-</span><span style="color:#a6e22e">bind可以简写为</span><span style="color:#f92672">:</span>&lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><h3 id="v-on--指令一般用作绑定事件">v-on  指令(一般用作绑定事件)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">template</span>&gt;
+	&lt;<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">v</span><span style="color:#f92672">-on:click</span><span style="color:#e6db74">=&#34;item++&#34;</span>&gt;<span style="color:#a6e22e">这里的v</span><span style="color:#f92672">-</span><span style="color:#a6e22e">on</span><span style="color:#f92672">:</span><span style="color:#a6e22e">click可以简写为</span><span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">click</span>,<span style="color:#a6e22e">每次点击触发事件使item</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>&lt;/<span style="color:#f92672">button</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#75715e">// 这是script里的注释
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+        <span style="color:#75715e">//  存储数据
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">data</span>(){
+        <span style="color:#66d9ef">return</span>{
+			<span style="color:#a6e22e">item</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>
+    },
+ }
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="v-model--指令v-model在表单控件元素上创建双向数据绑定">v-model  指令(v-model在表单控件元素上创建双向数据绑定)</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#f92672">v-model</span><span style="color:#e6db74">=&#34;item&#34;</span>&gt;
+<span style="color:#960050;background-color:#1e0010">&lt;!--</span> <span style="color:#a6e22e">这里的v</span><span style="color:#f92672">-model绑定了输入框数据与后端数据</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">所以称为双向数据绑定</span> <span style="color:#960050;background-color:#1e0010">--</span>&gt;
+</code></pre></div>
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="/blog/blog/categories/hugo">Hugo</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="/blog/blog/tags/tutorial">tutorial</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="/blog/blog/%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/"
+                class="button big previous">中间件的使用</a></li>
+    
+
+    
+        <li><a href="/blog/blog/vue-i18n%E5%A4%9A%E8%AF%AD%E8%A8%80%E4%BD%BF%E7%94%A8/"
+                class="button big next">vue-i18n多语言使用</a></li>
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='/blog/'><img src="/blog/img/main/touxiang3.jpg" class="intro-circle" width="150px" alt="Hugo Future Imperfect" /></a>
+      
+    
+    
+      <header>
+        <h2>mff</h2>
+        <p>Effort is for money, and money is life!</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+          
+    <li><a href="/blog/blog/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/https://mff-project.gitee.io/hugoblog/" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+  <li><a href="//gitlab.com/https://gitee.com/mff-project" target="_blank" title="GitLab" class="fa fa-gitlab"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/https://weibo.com/" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="weixin://contacts/profile/mpamhd1314" target="_blank" title="WeChat" class="fa fa-weixin"></a></li>
+
+
+
+  <li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=2980738482&amp;site=qq&amp;menu=yes" target="_blank" title="QQ" class="fa fa-qq"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:2980738482@qq.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Posts</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/docker%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%89%E8%A3%85/">doker安装及介绍</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-22'>
+                May 22, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/%E4%B8%83%E7%89%9B%E4%BA%91%E8%BF%9B%E5%BA%A6%E6%9D%A1%E6%98%BE%E7%A4%BA%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/">七牛云进度条显示上传文件</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-21'>
+                May 21, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/%E5%88%86%E9%A1%B5%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/">分页器的使用</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-21'>
+                May 21, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/%E5%8E%9F%E7%94%9Fsql%E5%AE%9E%E7%8E%B0%E5%A4%9A%E9%87%8D%E6%9F%A5%E8%AF%A2/">原生sql底层实现多重查询</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-20'>
+                May 20, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E5%92%8C%E5%85%B3%E9%94%AE%E8%AF%8D%E4%BA%AE%E9%AB%98/">模糊搜索及关键词亮高</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-20'>
+                May 20, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="/blog/categories/">Categories</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/blog/categories/hugo/">hugo</a>
+                <span style="float:right;">31</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>About</h3>
+      <p>blog于2020年5月10日创建(It was created on May 10, 2020),文章主要介绍了python的一些常用框架和库及它们的一些用法</p>
+      <a href="/blog/about/" class="button">Learn More</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+          
+    <li><a href="/blog/blog/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/https://mff-project.gitee.io/hugoblog/" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+  <li><a href="//gitlab.com/https://gitee.com/mff-project" target="_blank" title="GitLab" class="fa fa-gitlab"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/https://weibo.com/" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="weixin://contacts/profile/mpamhd1314" target="_blank" title="WeChat" class="fa fa-weixin"></a></li>
+
+
+
+  <li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=2980738482&amp;site=qq&amp;menu=yes" target="_blank" title="QQ" class="fa fa-qq"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:2980738482@qq.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2020
+        
+          mff blog
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="/blog/js/util.js"></script>
+      <script src="/blog/js/main.js"></script>
+      <script src="/blog/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

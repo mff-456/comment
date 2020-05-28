@@ -1,0 +1,1116 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "\/blog\/"
+        },
+        "articleSection" : "blog",
+        "name" : "第三方登录(微博登录)",
+        "headline" : "第三方登录(微博登录)",
+        "description" : "mff的个人博客",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2020",
+        "datePublished": "2020-04-28 00:00:00 \x2b0000 UTC",
+        "dateModified" : "2020-04-28 00:00:00 \x2b0000 UTC",
+        "url" : "\/blog\/blog\/%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95%E5%BE%AE%E5%8D%9A%E7%99%BB%E5%BD%95%E5%AE%9E%E8%B7%B5\/",
+        "wordCount" : "144",
+        "keywords" : [ "tutorial","Blog" ]
+    }
+    </script>
+        
+            
+                <title>第三方登录(微博登录)</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.69.0" />
+        
+
+
+        
+            <meta name="author" content="mff">
+        
+        
+            <meta name="description" content="mff的个人博客">
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="第三方登录(微博登录)"/>
+<meta name="twitter:description" content="mff的个人博客"/>
+
+        <meta property="og:title" content="第三方登录(微博登录)" />
+<meta property="og:description" content="mff的个人博客" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/blog/%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95%E5%BE%AE%E5%8D%9A%E7%99%BB%E5%BD%95%E5%AE%9E%E8%B7%B5/" />
+<meta property="article:published_time" content="2020-04-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-28T00:00:00+00:00" />
+
+        <meta property="og:image" content="/blog//images/logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        <meta itemprop="name" content="第三方登录(微博登录)">
+<meta itemprop="description" content="mff的个人博客">
+<meta itemprop="datePublished" content="2020-04-28T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-04-28T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="144">
+
+
+
+<meta itemprop="keywords" content="tutorial," />
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="/blog/css/main.css">
+            <link rel="stylesheet" href="/blog/css/add-on.css">
+            <link rel="stylesheet" href="/blog/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="/blog/">blog</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/blog/">
+                            <i class="fa fa-home">&nbsp;</i>主页
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog笔记
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://mff-project.gitee.io/hugoblog/posts/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>个人简历
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/itemized/">
+                            <i class="fa fa-list">&nbsp;</i>最近项目
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>联系我
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="/blog/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="/blog/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/blog/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>主页
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog笔记
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://mff-project.gitee.io/hugoblog/posts/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>个人简历
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/itemized/">
+                            <h3>
+                                <i class="fa fa-list">&nbsp;</i>最近项目
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>联系我
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/docker%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%89%E8%A3%85/">doker安装及介绍</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-22'>
+                                    May 22, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/%E4%B8%83%E7%89%9B%E4%BA%91%E8%BF%9B%E5%BA%A6%E6%9D%A1%E6%98%BE%E7%A4%BA%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/">七牛云进度条显示上传文件</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-21'>
+                                    May 21, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/%E5%88%86%E9%A1%B5%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/">分页器的使用</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-21'>
+                                    May 21, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/%E5%8E%9F%E7%94%9Fsql%E5%AE%9E%E7%8E%B0%E5%A4%9A%E9%87%8D%E6%9F%A5%E8%AF%A2/">原生sql底层实现多重查询</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-20'>
+                                    May 20, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E5%92%8C%E5%85%B3%E9%94%AE%E8%AF%8D%E4%BA%AE%E9%AB%98/">模糊搜索及关键词亮高</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-20'>
+                                    May 20, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2fblog%2fblog%2f%25E7%25AC%25AC%25E4%25B8%2589%25E6%2596%25B9%25E7%2599%25BB%25E5%25BD%2595%25E5%25BE%25AE%25E5%258D%259A%25E7%2599%25BB%25E5%25BD%2595%25E5%25AE%259E%25E8%25B7%25B5%2f&amp;text=%e7%ac%ac%e4%b8%89%e6%96%b9%e7%99%bb%e5%bd%95%28%e5%be%ae%e5%8d%9a%e7%99%bb%e5%bd%95%29&amp;via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2fblog%2fblog%2f%25E7%25AC%25AC%25E4%25B8%2589%25E6%2596%25B9%25E7%2599%25BB%25E5%25BD%2595%25E5%25BE%25AE%25E5%258D%259A%25E7%2599%25BB%25E5%25BD%2595%25E5%25AE%259E%25E8%25B7%25B5%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fblog%2f%25E7%25AC%25AC%25E4%25B8%2589%25E6%2596%25B9%25E7%2599%25BB%25E5%25BD%2595%25E5%25BE%25AE%25E5%258D%259A%25E7%2599%25BB%25E5%25BD%2595%25E5%25AE%259E%25E8%25B7%25B5%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2fblog%2fblog%2f%25E7%25AC%25AC%25E4%25B8%2589%25E6%2596%25B9%25E7%2599%25BB%25E5%25BD%2595%25E5%25BE%25AE%25E5%258D%259A%25E7%2599%25BB%25E5%25BD%2595%25E5%25AE%259E%25E8%25B7%25B5%2f&amp;title=%e7%ac%ac%e4%b8%89%e6%96%b9%e7%99%bb%e5%bd%95%28%e5%be%ae%e5%8d%9a%e7%99%bb%e5%bd%95%29" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fblog%2f%25E7%25AC%25AC%25E4%25B8%2589%25E6%2596%25B9%25E7%2599%25BB%25E5%25BD%2595%25E5%25BE%25AE%25E5%258D%259A%25E7%2599%25BB%25E5%25BD%2595%25E5%25AE%259E%25E8%25B7%25B5%2f&amp;title=%e7%ac%ac%e4%b8%89%e6%96%b9%e7%99%bb%e5%bd%95%28%e5%be%ae%e5%8d%9a%e7%99%bb%e5%bd%95%29" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fblog%2f%25E7%25AC%25AC%25E4%25B8%2589%25E6%2596%25B9%25E7%2599%25BB%25E5%25BD%2595%25E5%25BE%25AE%25E5%258D%259A%25E7%2599%25BB%25E5%25BD%2595%25E5%25AE%259E%25E8%25B7%25B5%2f&amp;title=%e7%ac%ac%e4%b8%89%e6%96%b9%e7%99%bb%e5%bd%95%28%e5%be%ae%e5%8d%9a%e7%99%bb%e5%bd%95%29" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fblog%2f%25E7%25AC%25AC%25E4%25B8%2589%25E6%2596%25B9%25E7%2599%25BB%25E5%25BD%2595%25E5%25BE%25AE%25E5%258D%259A%25E7%2599%25BB%25E5%25BD%2595%25E5%25AE%259E%25E8%25B7%25B5%2f&amp;description=%e7%ac%ac%e4%b8%89%e6%96%b9%e7%99%bb%e5%bd%95%28%e5%be%ae%e5%8d%9a%e7%99%bb%e5%bd%95%29" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by mff&amp;body=%2fblog%2fblog%2f%25E7%25AC%25AC%25E4%25B8%2589%25E6%2596%25B9%25E7%2599%25BB%25E5%25BD%2595%25E5%25BE%25AE%25E5%258D%259A%25E7%2599%25BB%25E5%25BD%2595%25E5%25AE%259E%25E8%25B7%25B5%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="/blog/blog/%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95%E5%BE%AE%E5%8D%9A%E7%99%BB%E5%BD%95%E5%AE%9E%E8%B7%B5/">第三方登录(微博登录)</a></h1>
+            
+        
+        
+            <p>mff的个人博客</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2020-04-28'>
+            April 28, 2020</time>
+        <span class="author">mff</span>
+        
+            <p>1 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2fblog%2fblog%2f%25E7%25AC%25AC%25E4%25B8%2589%25E6%2596%25B9%25E7%2599%25BB%25E5%25BD%2595%25E5%25BE%25AE%25E5%258D%259A%25E7%2599%25BB%25E5%25BD%2595%25E5%25AE%259E%25E8%25B7%25B5%2f&amp;text=%e7%ac%ac%e4%b8%89%e6%96%b9%e7%99%bb%e5%bd%95%28%e5%be%ae%e5%8d%9a%e7%99%bb%e5%bd%95%29&amp;via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2fblog%2fblog%2f%25E7%25AC%25AC%25E4%25B8%2589%25E6%2596%25B9%25E7%2599%25BB%25E5%25BD%2595%25E5%25BE%25AE%25E5%258D%259A%25E7%2599%25BB%25E5%25BD%2595%25E5%25AE%259E%25E8%25B7%25B5%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fblog%2f%25E7%25AC%25AC%25E4%25B8%2589%25E6%2596%25B9%25E7%2599%25BB%25E5%25BD%2595%25E5%25BE%25AE%25E5%258D%259A%25E7%2599%25BB%25E5%25BD%2595%25E5%25AE%259E%25E8%25B7%25B5%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2fblog%2fblog%2f%25E7%25AC%25AC%25E4%25B8%2589%25E6%2596%25B9%25E7%2599%25BB%25E5%25BD%2595%25E5%25BE%25AE%25E5%258D%259A%25E7%2599%25BB%25E5%25BD%2595%25E5%25AE%259E%25E8%25B7%25B5%2f&amp;title=%e7%ac%ac%e4%b8%89%e6%96%b9%e7%99%bb%e5%bd%95%28%e5%be%ae%e5%8d%9a%e7%99%bb%e5%bd%95%29" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fblog%2f%25E7%25AC%25AC%25E4%25B8%2589%25E6%2596%25B9%25E7%2599%25BB%25E5%25BD%2595%25E5%25BE%25AE%25E5%258D%259A%25E7%2599%25BB%25E5%25BD%2595%25E5%25AE%259E%25E8%25B7%25B5%2f&amp;title=%e7%ac%ac%e4%b8%89%e6%96%b9%e7%99%bb%e5%bd%95%28%e5%be%ae%e5%8d%9a%e7%99%bb%e5%bd%95%29" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fblog%2f%25E7%25AC%25AC%25E4%25B8%2589%25E6%2596%25B9%25E7%2599%25BB%25E5%25BD%2595%25E5%25BE%25AE%25E5%258D%259A%25E7%2599%25BB%25E5%25BD%2595%25E5%25AE%259E%25E8%25B7%25B5%2f&amp;title=%e7%ac%ac%e4%b8%89%e6%96%b9%e7%99%bb%e5%bd%95%28%e5%be%ae%e5%8d%9a%e7%99%bb%e5%bd%95%29" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fblog%2f%25E7%25AC%25AC%25E4%25B8%2589%25E6%2596%25B9%25E7%2599%25BB%25E5%25BD%2595%25E5%25BE%25AE%25E5%258D%259A%25E7%2599%25BB%25E5%25BD%2595%25E5%25AE%259E%25E8%25B7%25B5%2f&amp;description=%e7%ac%ac%e4%b8%89%e6%96%b9%e7%99%bb%e5%bd%95%28%e5%be%ae%e5%8d%9a%e7%99%bb%e5%bd%95%29" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by mff&amp;body=%2fblog%2fblog%2f%25E7%25AC%25AC%25E4%25B8%2589%25E6%2596%25B9%25E7%2599%25BB%25E5%25BD%2595%25E5%25BE%25AE%25E5%258D%259A%25E7%2599%25BB%25E5%25BD%2595%25E5%25AE%259E%25E8%25B7%25B5%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+
+  <div id="content">
+    <h3 id="实现第三方登录逻辑架构图">实现第三方登录逻辑架构图</h3>
+<p><img src="/blog/img/imgs/%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="第三方登录流程图"></p>
+<h3 id="首先需要在新浪微博中创建应用">首先需要在新浪微博中创建应用</h3>
+<p><img src="/blog/img/imgs/Snipaste_2020-04-29_17-41-54.png" alt="1588152149684"></p>
+<p>点击网站接入后点击立即接入</p>
+<h3 id="创建好应用后点击我的应用">创建好应用后点击我的应用</h3>
+<p><img src="/blog/img/imgs/Snipaste_2020-04-29_17-42-03.png" alt="1588152280930"></p>
+<p>点击已经创建好的应用,点击应用信息</p>
+<p><img src="/blog/img/imgs/Snipaste_2020-04-29_17-41-18.png" alt="1588152385217"></p>
+<p>找到App Key和App Serect一会做请求参数用</p>
+<p><img src="/blog/img/imgs/Snipaste_2020-04-29_17-41-45.png" alt="1588152587397"></p>
+<p>点击高级信息后设置回调url：(设置路由为Django后端url端口为8000的路由)</p>
+<p><img src="/blog/img/imgs/Snipaste_2020-04-29_17-47-09.png" alt="1588153625573"></p>
+<p>随后点击测试信息，点击编辑，添加测试账号的微博昵称</p>
+<p><img src="/blog/img/imgs/Snipaste_2020-04-29_17-55-34.png" alt="1588154164362"></p>
+<p>这里新浪微博中操作完成</p>
+<hr>
+<h3 id="回到vue项目中在loginvue文件中操作">回到vue项目中，在login.vue文件中操作</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span>{
+        <span style="color:#75715e">// 新浪微博登录
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">sina</span><span style="color:#f92672">:</span><span style="color:#66d9ef">function</span>(){
+            <span style="color:#75715e">// 组装url
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// 这里的client_id为创建微博应用中的App Key，redirect_uri为回调url
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://api.weibo.com/oauth2/authorize?client_id=3468695118&amp;redirect_uri=http://127.0.0.1:8000/mff/weibo&#34;</span>;
+            <span style="color:#75715e">// 跳转微博登录
+</span><span style="color:#75715e"></span>            window,<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">url</span>;
+        },
+    }
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>这里点击微博登录登陆成功后会返回一个code的参数，在Django后端中会用code的参数用来换取微博用户信息</p>
+<p>Django的用户操作文件中（记得配置好wb_back方法的路由）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 新浪微博回调方法</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wb_back</span>(request):
+    code <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>GET<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;code&#39;</span>,None)
+    <span style="color:#75715e"># 定义token接口地址</span>
+    url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://api.weibo.com/oauth2/access_token&#34;</span>
+    <span style="color:#75715e"># 定义参数</span>
+    re <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(url<span style="color:#f92672">=</span>url,data<span style="color:#f92672">=</span>{
+        <span style="color:#e6db74">&#34;client_id&#34;</span>:<span style="color:#e6db74">&#34;3468695118&#34;</span>,
+        <span style="color:#e6db74">&#34;client_secret&#34;</span>:<span style="color:#e6db74">&#34;79abae3dded8351090fc68fed39a3bc0&#34;</span>,
+        <span style="color:#e6db74">&#34;grant_type&#34;</span>:<span style="color:#e6db74">&#34;authorization_code&#34;</span>,
+        <span style="color:#e6db74">&#34;code&#34;</span>:code,
+        <span style="color:#e6db74">&#34;redirect_uri&#34;</span>:<span style="color:#e6db74">&#34;http://127.0.0.1:8000/mff/weibo&#34;</span>
+    })
+    <span style="color:#66d9ef">print</span>(re<span style="color:#f92672">.</span>json()[<span style="color:#e6db74">&#39;access_token&#39;</span>],re<span style="color:#f92672">.</span>json()[<span style="color:#e6db74">&#39;uid&#39;</span>])
+    <span style="color:#75715e"># 换取微博用户信息</span>
+    res <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://api.weibo.com/2/users/show.json&#39;</span>,params<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;access_token&#39;</span>:re<span style="color:#f92672">.</span>json()[<span style="color:#e6db74">&#39;access_token&#39;</span>],<span style="color:#e6db74">&#39;uid&#39;</span>:re<span style="color:#f92672">.</span>json()[<span style="color:#e6db74">&#39;uid&#39;</span>]})
+    <span style="color:#75715e"># 用户信息操作</span>
+    sina_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+    user_id <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+    <span style="color:#75715e"># 判断用户是否用微博登录过</span>
+    <span style="color:#75715e"># 拿到数据库用户信息和微博用户信息做对比昵称</span>
+    user <span style="color:#f92672">=</span> User<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(username<span style="color:#f92672">=</span>str(res<span style="color:#f92672">.</span>json()[<span style="color:#e6db74">&#39;name&#39;</span>]))<span style="color:#f92672">.</span>first()
+    <span style="color:#75715e"># 如果用户已存在</span>
+    <span style="color:#66d9ef">if</span> user:
+        <span style="color:#75715e"># 代表曾经登录过，直接返回信息给前端</span>
+        sina_name <span style="color:#f92672">=</span> user<span style="color:#f92672">.</span>username
+        user_id <span style="color:#f92672">=</span> user<span style="color:#f92672">.</span>id
+    <span style="color:#75715e"># 如果用户不存在 </span>
+    <span style="color:#66d9ef">else</span>:
+        <span style="color:#75715e"># 首次登录入库微博用户信息</span>
+        user <span style="color:#f92672">=</span> User(username<span style="color:#f92672">=</span>str(res<span style="color:#f92672">.</span>json()[<span style="color:#e6db74">&#39;name&#39;</span>]),password<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>)
+        <span style="color:#75715e"># 将微博用户信息保存到数据库</span>
+        user<span style="color:#f92672">.</span>save()
+        <span style="color:#75715e"># 保存后再次查询进行登录</span>
+        user <span style="color:#f92672">=</span> User<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(username<span style="color:#f92672">=</span>str(res<span style="color:#f92672">.</span>json()[<span style="color:#e6db74">&#39;name&#39;</span>]))<span style="color:#f92672">.</span>first()
+        sina_name <span style="color:#f92672">=</span> user<span style="color:#f92672">.</span>username
+        user_id <span style="color:#f92672">=</span> user<span style="color:#f92672">.</span>id
+    <span style="color:#75715e"># 将微博用户信息返回给前端</span>
+    <span style="color:#66d9ef">return</span> redirect(<span style="color:#e6db74">&#39;http://localhost:8080/?sina_name=&#39;</span><span style="color:#f92672">+</span>str(sina_name)<span style="color:#f92672">+</span><span style="color:#e6db74">&#39;&amp;uid=&#39;</span><span style="color:#f92672">+</span>str(user_id))
+</code></pre></div><p>这里登录三方登录(微博登录)成功后会获得微博的用户信息，到前端登录后跳转的页面进行操作</p>
+<p>显示登录后用户信息的vue页面</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#a6e22e">mounted</span><span style="color:#f92672">:</span><span style="color:#66d9ef">function</span>(){
+       <span style="color:#75715e">// 接收微博用户信息
+</span><span style="color:#75715e"></span>	  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sina_name</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$route</span>.<span style="color:#a6e22e">query</span>.<span style="color:#a6e22e">sina_name</span>;
+	  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">user_id</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$route</span>.<span style="color:#a6e22e">query</span>.<span style="color:#a6e22e">uid</span>;
+       <span style="color:#75715e">// 判断路由是否有用户信息(正常用户请求路由没有携带路由参数)
+</span><span style="color:#75715e"></span>	  <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">user_id</span>){
+          <span style="color:#75715e">// 有的话存入获取到的用户信息，没有则不存储
+</span><span style="color:#75715e"></span>		  <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;username&#34;</span>,<span style="color:#a6e22e">sina_name</span>);
+		  <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;uid&#34;</span>,<span style="color:#a6e22e">user_id</span>)
+	  }
+    }
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div>
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="/blog/blog/categories/hugo">Hugo</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="/blog/blog/tags/tutorial">tutorial</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="/blog/blog/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E9%A1%B5%E5%99%A8%E5%8F%8A%E5%81%8F%E7%A7%BB/"
+                class="button big previous">自定义分页器及偏移</a></li>
+    
+
+    
+        <li><a href="/blog/blog/%E6%BB%91%E5%9D%97%E9%AA%8C%E8%AF%81/"
+                class="button big next">滑块验证</a></li>
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='/blog/'><img src="/blog/img/main/touxiang3.jpg" class="intro-circle" width="150px" alt="Hugo Future Imperfect" /></a>
+      
+    
+    
+      <header>
+        <h2>mff</h2>
+        <p>Effort is for money, and money is life!</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+          
+    <li><a href="/blog/blog/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/https://mff-project.gitee.io/hugoblog/" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+  <li><a href="//gitlab.com/https://gitee.com/mff-project" target="_blank" title="GitLab" class="fa fa-gitlab"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/https://weibo.com/" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="weixin://contacts/profile/mpamhd1314" target="_blank" title="WeChat" class="fa fa-weixin"></a></li>
+
+
+
+  <li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=2980738482&amp;site=qq&amp;menu=yes" target="_blank" title="QQ" class="fa fa-qq"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:2980738482@qq.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Posts</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/docker%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%89%E8%A3%85/">doker安装及介绍</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-22'>
+                May 22, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/%E4%B8%83%E7%89%9B%E4%BA%91%E8%BF%9B%E5%BA%A6%E6%9D%A1%E6%98%BE%E7%A4%BA%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/">七牛云进度条显示上传文件</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-21'>
+                May 21, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/%E5%88%86%E9%A1%B5%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/">分页器的使用</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-21'>
+                May 21, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/%E5%8E%9F%E7%94%9Fsql%E5%AE%9E%E7%8E%B0%E5%A4%9A%E9%87%8D%E6%9F%A5%E8%AF%A2/">原生sql底层实现多重查询</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-20'>
+                May 20, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E5%92%8C%E5%85%B3%E9%94%AE%E8%AF%8D%E4%BA%AE%E9%AB%98/">模糊搜索及关键词亮高</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-20'>
+                May 20, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="/blog/categories/">Categories</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/blog/categories/hugo/">hugo</a>
+                <span style="float:right;">31</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>About</h3>
+      <p>blog于2020年5月10日创建(It was created on May 10, 2020),文章主要介绍了python的一些常用框架和库及它们的一些用法</p>
+      <a href="/blog/about/" class="button">Learn More</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+          
+    <li><a href="/blog/blog/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/https://mff-project.gitee.io/hugoblog/" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+  <li><a href="//gitlab.com/https://gitee.com/mff-project" target="_blank" title="GitLab" class="fa fa-gitlab"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/https://weibo.com/" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="weixin://contacts/profile/mpamhd1314" target="_blank" title="WeChat" class="fa fa-weixin"></a></li>
+
+
+
+  <li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=2980738482&amp;site=qq&amp;menu=yes" target="_blank" title="QQ" class="fa fa-qq"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:2980738482@qq.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2020
+        
+          mff blog
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="/blog/js/util.js"></script>
+      <script src="/blog/js/main.js"></script>
+      <script src="/blog/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

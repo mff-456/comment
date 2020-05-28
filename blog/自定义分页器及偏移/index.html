@@ -1,0 +1,1133 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "\/blog\/"
+        },
+        "articleSection" : "blog",
+        "name" : "自定义分页器及偏移",
+        "headline" : "自定义分页器及偏移",
+        "description" : "mff的个人博客",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2020",
+        "datePublished": "2020-04-28 00:00:00 \x2b0000 UTC",
+        "dateModified" : "2020-04-28 00:00:00 \x2b0000 UTC",
+        "url" : "\/blog\/blog\/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E9%A1%B5%E5%99%A8%E5%8F%8A%E5%81%8F%E7%A7%BB\/",
+        "wordCount" : "223",
+        "keywords" : [ "tutorial","Blog" ]
+    }
+    </script>
+        
+            
+                <title>自定义分页器及偏移</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.69.0" />
+        
+
+
+        
+            <meta name="author" content="mff">
+        
+        
+            <meta name="description" content="mff的个人博客">
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="自定义分页器及偏移"/>
+<meta name="twitter:description" content="mff的个人博客"/>
+
+        <meta property="og:title" content="自定义分页器及偏移" />
+<meta property="og:description" content="mff的个人博客" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/blog/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E9%A1%B5%E5%99%A8%E5%8F%8A%E5%81%8F%E7%A7%BB/" />
+<meta property="article:published_time" content="2020-04-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-28T00:00:00+00:00" />
+
+        <meta property="og:image" content="/blog//images/logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        <meta itemprop="name" content="自定义分页器及偏移">
+<meta itemprop="description" content="mff的个人博客">
+<meta itemprop="datePublished" content="2020-04-28T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-04-28T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="223">
+
+
+
+<meta itemprop="keywords" content="tutorial," />
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="/blog/css/main.css">
+            <link rel="stylesheet" href="/blog/css/add-on.css">
+            <link rel="stylesheet" href="/blog/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="/blog/">blog</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/blog/">
+                            <i class="fa fa-home">&nbsp;</i>主页
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/blog/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog笔记
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://mff-project.gitee.io/hugoblog/posts/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>个人简历
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/itemized/">
+                            <i class="fa fa-list">&nbsp;</i>最近项目
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/blog/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>联系我
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="/blog/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="/blog/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/blog/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>主页
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/blog/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog笔记
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://mff-project.gitee.io/hugoblog/posts/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>个人简历
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/itemized/">
+                            <h3>
+                                <i class="fa fa-list">&nbsp;</i>最近项目
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/blog/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>联系我
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/docker%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%89%E8%A3%85/">doker安装及介绍</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-22'>
+                                    May 22, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/%E4%B8%83%E7%89%9B%E4%BA%91%E8%BF%9B%E5%BA%A6%E6%9D%A1%E6%98%BE%E7%A4%BA%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/">七牛云进度条显示上传文件</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-21'>
+                                    May 21, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/%E5%88%86%E9%A1%B5%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/">分页器的使用</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-21'>
+                                    May 21, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/%E5%8E%9F%E7%94%9Fsql%E5%AE%9E%E7%8E%B0%E5%A4%9A%E9%87%8D%E6%9F%A5%E8%AF%A2/">原生sql底层实现多重查询</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-20'>
+                                    May 20, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/blog/blog/%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E5%92%8C%E5%85%B3%E9%94%AE%E8%AF%8D%E4%BA%AE%E9%AB%98/">模糊搜索及关键词亮高</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-20'>
+                                    May 20, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /blog/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2fblog%2fblog%2f%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589%25E5%2588%2586%25E9%25A1%25B5%25E5%2599%25A8%25E5%258F%258A%25E5%2581%258F%25E7%25A7%25BB%2f&amp;text=%e8%87%aa%e5%ae%9a%e4%b9%89%e5%88%86%e9%a1%b5%e5%99%a8%e5%8f%8a%e5%81%8f%e7%a7%bb&amp;via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2fblog%2fblog%2f%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589%25E5%2588%2586%25E9%25A1%25B5%25E5%2599%25A8%25E5%258F%258A%25E5%2581%258F%25E7%25A7%25BB%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fblog%2f%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589%25E5%2588%2586%25E9%25A1%25B5%25E5%2599%25A8%25E5%258F%258A%25E5%2581%258F%25E7%25A7%25BB%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2fblog%2fblog%2f%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589%25E5%2588%2586%25E9%25A1%25B5%25E5%2599%25A8%25E5%258F%258A%25E5%2581%258F%25E7%25A7%25BB%2f&amp;title=%e8%87%aa%e5%ae%9a%e4%b9%89%e5%88%86%e9%a1%b5%e5%99%a8%e5%8f%8a%e5%81%8f%e7%a7%bb" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fblog%2f%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589%25E5%2588%2586%25E9%25A1%25B5%25E5%2599%25A8%25E5%258F%258A%25E5%2581%258F%25E7%25A7%25BB%2f&amp;title=%e8%87%aa%e5%ae%9a%e4%b9%89%e5%88%86%e9%a1%b5%e5%99%a8%e5%8f%8a%e5%81%8f%e7%a7%bb" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fblog%2f%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589%25E5%2588%2586%25E9%25A1%25B5%25E5%2599%25A8%25E5%258F%258A%25E5%2581%258F%25E7%25A7%25BB%2f&amp;title=%e8%87%aa%e5%ae%9a%e4%b9%89%e5%88%86%e9%a1%b5%e5%99%a8%e5%8f%8a%e5%81%8f%e7%a7%bb" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fblog%2f%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589%25E5%2588%2586%25E9%25A1%25B5%25E5%2599%25A8%25E5%258F%258A%25E5%2581%258F%25E7%25A7%25BB%2f&amp;description=%e8%87%aa%e5%ae%9a%e4%b9%89%e5%88%86%e9%a1%b5%e5%99%a8%e5%8f%8a%e5%81%8f%e7%a7%bb" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by mff&amp;body=%2fblog%2fblog%2f%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589%25E5%2588%2586%25E9%25A1%25B5%25E5%2599%25A8%25E5%258F%258A%25E5%2581%258F%25E7%25A7%25BB%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="/blog/blog/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E9%A1%B5%E5%99%A8%E5%8F%8A%E5%81%8F%E7%A7%BB/">自定义分页器及偏移</a></h1>
+            
+        
+        
+            <p>mff的个人博客</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2020-04-28'>
+            April 28, 2020</time>
+        <span class="author">mff</span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2fblog%2fblog%2f%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589%25E5%2588%2586%25E9%25A1%25B5%25E5%2599%25A8%25E5%258F%258A%25E5%2581%258F%25E7%25A7%25BB%2f&amp;text=%e8%87%aa%e5%ae%9a%e4%b9%89%e5%88%86%e9%a1%b5%e5%99%a8%e5%8f%8a%e5%81%8f%e7%a7%bb&amp;via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2fblog%2fblog%2f%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589%25E5%2588%2586%25E9%25A1%25B5%25E5%2599%25A8%25E5%258F%258A%25E5%2581%258F%25E7%25A7%25BB%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fblog%2f%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589%25E5%2588%2586%25E9%25A1%25B5%25E5%2599%25A8%25E5%258F%258A%25E5%2581%258F%25E7%25A7%25BB%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2fblog%2fblog%2f%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589%25E5%2588%2586%25E9%25A1%25B5%25E5%2599%25A8%25E5%258F%258A%25E5%2581%258F%25E7%25A7%25BB%2f&amp;title=%e8%87%aa%e5%ae%9a%e4%b9%89%e5%88%86%e9%a1%b5%e5%99%a8%e5%8f%8a%e5%81%8f%e7%a7%bb" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fblog%2f%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589%25E5%2588%2586%25E9%25A1%25B5%25E5%2599%25A8%25E5%258F%258A%25E5%2581%258F%25E7%25A7%25BB%2f&amp;title=%e8%87%aa%e5%ae%9a%e4%b9%89%e5%88%86%e9%a1%b5%e5%99%a8%e5%8f%8a%e5%81%8f%e7%a7%bb" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=%2fblog%2fblog%2f%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589%25E5%2588%2586%25E9%25A1%25B5%25E5%2599%25A8%25E5%258F%258A%25E5%2581%258F%25E7%25A7%25BB%2f&amp;title=%e8%87%aa%e5%ae%9a%e4%b9%89%e5%88%86%e9%a1%b5%e5%99%a8%e5%8f%8a%e5%81%8f%e7%a7%bb" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fblog%2f%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589%25E5%2588%2586%25E9%25A1%25B5%25E5%2599%25A8%25E5%258F%258A%25E5%2581%258F%25E7%25A7%25BB%2f&amp;description=%e8%87%aa%e5%ae%9a%e4%b9%89%e5%88%86%e9%a1%b5%e5%99%a8%e5%8f%8a%e5%81%8f%e7%a7%bb" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by mff&amp;body=%2fblog%2fblog%2f%25E8%2587%25AA%25E5%25AE%259A%25E4%25B9%2589%25E5%2588%2586%25E9%25A1%25B5%25E5%2599%25A8%25E5%258F%258A%25E5%2581%258F%25E7%25A7%25BB%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+
+  <div id="content">
+    <p>后端见(分页器的使用.md)</p>
+<p>前端(vue.js)demo</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vue" data-lang="vue">&lt;<span style="color:#f92672">template</span>&gt;
+	&lt;<span style="color:#f92672">div</span>&gt;
+        
+        &lt;<span style="color:#f92672">div</span> <span style="color:#f92672">v-for</span><span style="color:#e6db74">=&#34;(item,index) in goodslist&#34; </span><span style="color:#f92672">:key</span><span style="color:#e6db74">=&#34;index&#34;</span>&gt;
+            &lt;<span style="color:#f92672">video</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;200&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;150&#34;</span> <span style="color:#f92672">:src</span><span style="color:#e6db74">=&#34;item.video&#34;</span> <span style="color:#a6e22e">controls</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;controls&#34;</span>&gt;&lt;/<span style="color:#f92672">video</span>&gt;
+            &lt;<span style="color:#f92672">h4</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#f92672">:href</span><span style="color:#e6db74">=&#34;&#39;http://localhost:8080/item/?id=&#39;+item.id&#34;</span>&gt;{{ <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">name</span> }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">h4</span>&gt;
+            &lt;<span style="color:#f92672">p</span>&gt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;emphasis&#34;</span>&gt;{{ <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">price</span> }}<span style="color:#960050;background-color:#1e0010">￥</span>&lt;/<span style="color:#f92672">span</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        <span style="color:#75715e">&lt;!--</span> <span style="color:#a6e22e">自定义分页器</span> <span style="color:#f92672">--&gt;</span>
+        &lt;<span style="color:#f92672">div</span>&gt;
+            &lt;<span style="color:#f92672">a</span> <span style="color:#f92672">@click</span><span style="color:#e6db74">=&#34;get_goods_self(1)&#34;</span>&gt;<span style="color:#a6e22e">首页</span>&lt;/<span style="color:#f92672">a</span>&gt;<span style="color:#960050;background-color:#1e0010">&amp;</span><span style="color:#a6e22e">emsp</span><span style="color:#960050;background-color:#1e0010">;&amp;</span><span style="color:#a6e22e">emsp</span><span style="color:#960050;background-color:#1e0010">;</span>
+            <span style="color:#960050;background-color:#1e0010">&lt;!--</span> <span style="color:#a6e22e">上一页</span> <span style="color:#960050;background-color:#1e0010">--</span>&gt;
+            &lt;<span style="color:#f92672">Button</span> <span style="color:#f92672">v-show</span><span style="color:#e6db74">=&#34;lastpage&#34; @click=&#34;get_goods_self(lastpage)&#34;&gt;上一页&lt;/Button&gt;&amp;emsp;&amp;emsp;
+</span><span style="color:#e6db74">            &lt;span v-for=&#34;item in last_page&#34;&gt;
+</span><span style="color:#e6db74">                &lt;a @click=&#34;get_goods_self(item)&#34;&gt;{{ item }}&lt;/a&gt;&amp;emsp;&amp;emsp;
+</span><span style="color:#e6db74">            &lt;/span&gt;
+</span><span style="color:#e6db74">            &lt;!-- 当前页 --&gt;	
+</span><span style="color:#e6db74">            &lt;a @click=&#34;get_goods_self(page)&#34;&gt;{{ page }}&lt;/a&gt;&amp;emsp;&amp;emsp;
+</span><span style="color:#e6db74">            &lt;!-- 右偏移 --&gt;
+</span><span style="color:#e6db74">            &lt;span v-for=&#34;item in next_page&#34;&gt;
+</span><span style="color:#e6db74">                &lt;a @click=&#34;get_goods_self(item)&#34;&gt;{{ item }}&lt;/a&gt;&amp;emsp;&amp;emsp;
+</span><span style="color:#e6db74">            &lt;/span&gt;
+</span><span style="color:#e6db74">            &lt;!-- 下一页 --&gt;
+</span><span style="color:#e6db74">            &lt;Button v-show=&#34;nextpage&#34; @click=&#34;get_goods_self(nextpage)&#34;&gt;下一页&lt;/Button&gt;&amp;emsp;&amp;emsp;
+</span><span style="color:#e6db74">            &lt;a @click=&#34;get_goods_self(allpage)&#34;</span>&gt;<span style="color:#a6e22e">尾页</span>&lt;/<span style="color:#f92672">a</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+        <span style="color:#a6e22e">data</span> () {
+            <span style="color:#66d9ef">return</span> {
+                <span style="color:#75715e">// 分页偏移
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">last_page</span><span style="color:#f92672">:</span>[],  <span style="color:#75715e">// 左
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">next_page</span><span style="color:#f92672">:</span>[],  <span style="color:#75715e">// 右
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">// 自定义分页商品列表
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">goodslist_self</span><span style="color:#f92672">:</span>[],
+                <span style="color:#75715e">// 自定义分页商品总数
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">total_self</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>,
+                <span style="color:#75715e">// 上一页
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">lastpage</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>,
+                <span style="color:#75715e">// 下一页
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">nextpage</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>,
+                <span style="color:#75715e">// 当前页
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">page</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span>,
+                <span style="color:#75715e">// 每页展示数量
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">size</span><span style="color:#f92672">:</span><span style="color:#ae81ff">4</span>,
+                <span style="color:#75715e">// 总页数
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">allpage</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>,
+            }
+        },
+        <span style="color:#a6e22e">mounted</span><span style="color:#f92672">:</span><span style="color:#66d9ef">function</span>(){
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">get_goods_self</span>(<span style="color:#ae81ff">1</span>);
+        },
+        <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span>{
+            <span style="color:#75715e">// 自定义分页获取商品信息
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">get_goods_self</span><span style="color:#f92672">:</span><span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">page</span>){
+                <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">page</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">page</span>;
+                <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;http://127.0.0.1:8000/goodslist/&#39;</span>,{<span style="color:#a6e22e">params</span><span style="color:#f92672">:</span>{<span style="color:#a6e22e">page</span><span style="color:#f92672">:</span><span style="color:#a6e22e">page</span>,<span style="color:#a6e22e">size</span><span style="color:#f92672">:</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">size</span>}}).<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">result</span>)=&gt;{
+                    <span style="color:#75715e">// 数据赋值
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">goodslist_self</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">data</span>;
+                    <span style="color:#75715e">// 商品总数
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">total_self</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">total</span>;
+                    <span style="color:#75715e">// 判断上一页
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">page</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>){
+                        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lastpage</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+                    }<span style="color:#66d9ef">else</span>{
+                        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lastpage</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">page</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+                    }
+                    <span style="color:#75715e">// 计算总页数(Math.ceil)向上取整
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">allpage</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">ceil</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">total_self</span> <span style="color:#f92672">/</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">size</span>);
+                    <span style="color:#75715e">// 判断下一页
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">page</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">allpage</span>){
+                        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">nextpage</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+                    }<span style="color:#66d9ef">else</span>{
+                        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">nextpage</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">page</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+                    }
+                    <span style="color:#75715e">// 设置偏移量
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">move_page</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+                    <span style="color:#75715e">// 计算左侧偏移量
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">my_last</span> <span style="color:#f92672">=</span> [];
+                    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#a6e22e">page</span><span style="color:#f92672">-</span><span style="color:#a6e22e">move_page</span>;<span style="color:#a6e22e">i</span>&lt;<span style="color:#f92672">page</span><span style="color:#960050;background-color:#1e0010">;</span><span style="color:#a6e22e">i</span><span style="color:#960050;background-color:#1e0010">++)</span>{
+                        <span style="color:#a6e22e">if</span> <span style="color:#960050;background-color:#1e0010">(</span><span style="color:#a6e22e">i</span> &gt; <span style="color:#ae81ff">0</span>){
+                            <span style="color:#a6e22e">my_last</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">i</span>);
+                        }
+                    }
+                    <span style="color:#75715e">// 计算右偏移量
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">my_next</span> <span style="color:#f92672">=</span> [];
+                    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">=</span><span style="color:#a6e22e">page</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">&lt;=</span><span style="color:#a6e22e">page</span><span style="color:#f92672">+</span><span style="color:#a6e22e">move_page</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+                        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">allpage</span>){
+                            <span style="color:#a6e22e">my_next</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">i</span>);
+                        }
+                    }
+                    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">last_page</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">my_last</span>;
+                    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">next_page</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">my_next</span>;
+                })
+            }
+        }
+    }
+    
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div>
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="/blog/blog/categories/hugo">Hugo</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="/blog/blog/tags/tutorial">tutorial</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "shortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="/blog/blog/%E8%A3%85%E9%A5%B0%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/"
+                class="button big previous">装饰器的使用</a></li>
+    
+
+    
+        <li><a href="/blog/blog/%E7%AC%AC%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95%E5%BE%AE%E5%8D%9A%E7%99%BB%E5%BD%95%E5%AE%9E%E8%B7%B5/"
+                class="button big next">第三方登录(微博登录)</a></li>
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='/blog/'><img src="/blog/img/main/touxiang3.jpg" class="intro-circle" width="150px" alt="Hugo Future Imperfect" /></a>
+      
+    
+    
+      <header>
+        <h2>mff</h2>
+        <p>Effort is for money, and money is life!</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+          
+    <li><a href="/blog/blog/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/https://mff-project.gitee.io/hugoblog/" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+  <li><a href="//gitlab.com/https://gitee.com/mff-project" target="_blank" title="GitLab" class="fa fa-gitlab"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/https://weibo.com/" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="weixin://contacts/profile/mpamhd1314" target="_blank" title="WeChat" class="fa fa-weixin"></a></li>
+
+
+
+  <li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=2980738482&amp;site=qq&amp;menu=yes" target="_blank" title="QQ" class="fa fa-qq"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:2980738482@qq.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Posts</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/docker%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%89%E8%A3%85/">doker安装及介绍</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-22'>
+                May 22, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/%E4%B8%83%E7%89%9B%E4%BA%91%E8%BF%9B%E5%BA%A6%E6%9D%A1%E6%98%BE%E7%A4%BA%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/">七牛云进度条显示上传文件</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-21'>
+                May 21, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/%E5%88%86%E9%A1%B5%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/">分页器的使用</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-21'>
+                May 21, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/%E5%8E%9F%E7%94%9Fsql%E5%AE%9E%E7%8E%B0%E5%A4%9A%E9%87%8D%E6%9F%A5%E8%AF%A2/">原生sql底层实现多重查询</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-20'>
+                May 20, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/blog/blog/%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E5%92%8C%E5%85%B3%E9%94%AE%E8%AF%8D%E4%BA%AE%E9%AB%98/">模糊搜索及关键词亮高</a>
+              </h3>
+              
+              <time class="published" datetime='2020-05-20'>
+                May 20, 2020
+              </time>
+            </header>
+            
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /blog/
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+  
+  
+    <section id="categories">
+      <header>
+        <h3>
+          <a href="/blog/categories/">Categories</a>
+        </h3>
+      </header>
+        
+          
+        
+
+        
+        <p>
+          <article>
+            <header>
+              
+                <a href="/blog/categories/hugo/">hugo</a>
+                <span style="float:right;">31</span>
+              
+            </header>
+          </article>
+        </p>
+        
+    </section>
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>About</h3>
+      <p>blog于2020年5月10日创建(It was created on May 10, 2020),文章主要介绍了python的一些常用框架和库及它们的一些用法</p>
+      <a href="/blog/about/" class="button">Learn More</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+          
+    <li><a href="/blog/blog/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/https://mff-project.gitee.io/hugoblog/" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+  <li><a href="//gitlab.com/https://gitee.com/mff-project" target="_blank" title="GitLab" class="fa fa-gitlab"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/https://weibo.com/" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="weixin://contacts/profile/mpamhd1314" target="_blank" title="WeChat" class="fa fa-weixin"></a></li>
+
+
+
+  <li><a href="//wpa.qq.com/msgrd?v=3&amp;uin=2980738482&amp;site=qq&amp;menu=yes" target="_blank" title="QQ" class="fa fa-qq"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:2980738482@qq.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2020
+        
+          mff blog
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="/blog/js/util.js"></script>
+      <script src="/blog/js/main.js"></script>
+      <script src="/blog/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+
