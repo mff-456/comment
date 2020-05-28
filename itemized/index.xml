@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Itemizeds on mff blog</title>
-    <link>/blog/itemized/</link>
+    <link>/itemized/</link>
     <description>Recent content in Itemizeds on mff blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 22 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/blog/itemized/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/itemized/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>my django</title>
-      <link>/blog/itemized/item2/</link>
+      <link>/itemized/item2/</link>
       <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/itemized/item2/</guid>
+      <guid>/itemized/item2/</guid>
       <description>Cloning address https://gitee.com/mff-project/mydjango</description>
     </item>
     
     <item>
       <title>my vue</title>
-      <link>/blog/itemized/item1/</link>
+      <link>/itemized/item1/</link>
       <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blog/itemized/item1/</guid>
+      <guid>/itemized/item1/</guid>
       <description>Cloning address https://gitee.com/mff-project/myvue</description>
     </item>
     
